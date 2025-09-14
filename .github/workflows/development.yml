@@ -1,17 +1,16 @@
 name: Development build
 
 on:
+  push:
+    branches-ignore:
+      - 'l10n_main'
+    paths:
+      - 'build.txt' 
   pull_request:
     branches-ignore:
       - 'l10n_main'
     paths:
-      - 'build.txt'
-  push:
-    branches-ignore:
-      - 'l10n_main'
-    types: [opened, reopened]
-    paths:
-      - 'build.txt'
+      - 'build.txt' 
   workflow_dispatch:
 
 jobs:
