@@ -4,10 +4,14 @@ on:
   pull_request:
     branches-ignore:
       - 'l10n_main'
-    types: [opened, reopened]
+    paths:
+      - 'build.txt'
   push:
     branches-ignore:
       - 'l10n_main'
+    types: [opened, reopened]
+    paths:
+      - 'build.txt'
   workflow_dispatch:
 
 jobs:
